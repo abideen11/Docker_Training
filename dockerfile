@@ -1,8 +1,8 @@
-FROM nginx:latest
+FROM python:latest
 
 LABEL key="0.0.1"
 LABEL maintainer="abideenkareem17@gmail.com"
 
-WORKDIR /usr/share/nginx/html
+ADD my_script.py /
 
-COPY index.html index.html
+CMD [ "python", "./my_script.py" ]
